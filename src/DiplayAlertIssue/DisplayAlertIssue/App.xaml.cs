@@ -21,9 +21,9 @@ public partial class App : Application
                        at Microsoft.AppCenter.ApplicationLifecycleHelper.get_Instance()
                     """;
 
-        //Application.Current.MainPage.DisplayAlert("Alert Title", message, "OK");
+        Application.Current.MainPage.DisplayAlert("Alert Title", message, "OK");
 
-        Application.Current.MainPage.DisplayAlert("Alert Title", "This works just fine!", "OK");
+        //Application.Current.MainPage.DisplayAlert("Alert Title", "The message!", "OK");
 
     }
 }
