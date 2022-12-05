@@ -3,71 +3,18 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="HorizontalOptionsFullWidthIssue.MainPage">
 
-    <ContentPage.Content>
-        <RefreshView IsRefreshing="{Binding IsLoading}" Command="{Binding LoadItemsCommand}">
-            <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+    <RefreshView  
+        HorizontalOptions="FillAndExpand">
 
-                <StackLayout x:Name="DailyPaymentsLayout" Margin="10,0,0,0"
-                             HorizontalOptions="FillAndExpand"
-                RadioButtonGroup.GroupName="DailyPaymentsRadioGroup"      
-                    RadioButtonGroup.SelectedValue="{Binding PaymentsPeriod}" >
+        <StackLayout
+            BackgroundColor="MediumSeaGreen"
+            HorizontalOptions="FillAndExpand">
+            <Label
+                Text="FULL WIDTH ?"
+                HorizontalOptions="FillAndExpand"/>
+        </StackLayout>
 
-                    <StackLayout
-                        Orientation="Horizontal"
-                        HorizontalOptions="FillAndExpand"
-                        Spacing="10"
-                        Margin="0,10,0,0"
-                        Padding="0,0,0,0">
-                        <RadioButton x:Name="RadioGroupTodayPayments" IsEnabled="{Binding PageEnabled}" FontSize="Small" Content="Σήμερα" Value="0" />
-                        <RadioButton x:Name="RadioGroupYesterdayPayments"  IsEnabled="{Binding PageEnabled}" FontSize="Small" Content="Εχθές" Value="1" />
-                        <RadioButton x:Name="RadioGroupPeriodPayments" IsEnabled="{Binding PageEnabled}" FontSize="Small" Content="Περίοδος" Value="2"/>
-                    </StackLayout> 
-                 </StackLayout>
-
-                <StackLayout
-                    x:Name="PaymentDateLayout"
-                    IsVisible="{Binding IsPaymentsDateVisible}"
-                    HorizontalOptions="FillAndExpand"
-                    Margin="15,0,0,0">
-                    <Label Text="{Binding PaymentsDate}" FontSize="Medium" />
-                </StackLayout>
-
-                <StackLayout
-                    Orientation="Horizontal"
-                    HorizontalOptions="FillAndExpand"
-                    IsVisible="{Binding IsPaymentsPeriodVisible}"
-                    Margin="15,0,15,0">
-
-                    <StackLayout Orientation="Vertical" Spacing="0" HorizontalOptions="FillAndExpand">
-                        <Label IsEnabled="{Binding PageEnabled}" Grid.Column="0" Grid.Row="0" Text="ΑΠΟ" FontSize="Small" TextColor="CadetBlue" />
-                        <DatePicker IsEnabled="{Binding PageEnabled}" Grid.Column="1" Grid.Row="1" x:Name="FromDatePicker" Date="{Binding FromPaymentPeriod}"  />
-                    </StackLayout>
-
-                    <StackLayout Orientation="Vertical" Spacing="0"  HorizontalOptions="FillAndExpand">
-                        <Label IsEnabled="{Binding PageEnabled}" Grid.Column="1" Grid.Row="0" Text="ΕΩΣ" FontSize="Small" TextColor="CadetBlue" />
-                        <DatePicker IsEnabled="{Binding PageEnabled}" Grid.Column="1" Grid.Row="1" x:Name="UntilDatePicker" Date="{Binding UntilPaymentPeriod}" />
-                    </StackLayout>
-
-                </StackLayout>
-
-                <StackLayout Margin="0,0,0,0" BackgroundColor="MediumSeaGreen" VerticalOptions="Start">
-                    <Label Margin="0,10,0,2" TextColor="LightGoldenrodYellow" Text="ΣΥΝΟΛΟ ΕΙΣΠΡΑΞΕΩΝ" FontSize="Medium" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
-
- 
-                    <ActivityIndicator IsRunning="{Binding PageEnabled, Converter={StaticResource inverseBoolConverter}}" IsVisible="{Binding PageEnabled, Converter={StaticResource inverseBoolConverter}}" VerticalOptions="FillAndExpand" />
-                    <Label IsVisible="{Binding PageEnabled}" VerticalOptions="FillAndExpand" Margin="0,0,0,10" TextColor="White" Text="{Binding SumPayments, StringFormat='{0:C}'}" FontAttributes="Bold" FontSize="Title" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
-
-                </StackLayout>
-
-            </StackLayout>
-
-
-
-
-
-        </RefreshView>
-
-    </ContentPage.Content>
+    </RefreshView>
 
 </ContentPage>
 
