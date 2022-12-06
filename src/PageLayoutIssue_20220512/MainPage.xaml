@@ -4,80 +4,25 @@
              Title="Product"
              x:Class="LayoutIssue.MainPage">
 
-
-    <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Κλείσιμο"></ToolbarItem>
-    </ContentPage.ToolbarItems>
-
     <ContentPage.Content>
-        <TableView HasUnevenRows="True" Intent="Form" >
+
+        <TableView Intent="Form">
             <TableRoot>
+
                 <TableSection>
-                    <ViewCell>
-                        <StackLayout Spacing="0" Margin="10,10,10,10">
-                            <Label Text="ΠΕΡΙΓΡΑΦΗ" VerticalTextAlignment="End" FontSize="Small" />
-                            <Editor x:Name="DescriptionEditor" Text="{Binding Item.Name}" AutoSize="TextChanges" ></Editor>
-
-                            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
-                                <Editor Text="{Binding Item.NameTranslations}" HorizontalOptions="FillAndExpand" AutoSize="TextChanges"></Editor>
-                            </StackLayout>
-                        </StackLayout>
-                    </ViewCell>
 
                     <ViewCell>
-                        <StackLayout Orientation="Vertical">
-                            <StackLayout Orientation="Horizontal">
-                                <StackLayout Orientation="Vertical" Spacing="0" Margin="10,10,10,10" HorizontalOptions="FillAndExpand">
-                                    <Label Text="ΤΙΜΗ" HorizontalTextAlignment="Start" VerticalTextAlignment="End" FontSize="Small" />
-                                    <Entry x:Name="PriceEntry" Text="{Binding Item.Price, Converter={StaticResource decimalConverter}}"  HorizontalTextAlignment="End" Keyboard="Numeric" ClearButtonVisibility="WhileEditing">
-                                    </Entry>
-                                </StackLayout>
-
-                                <StackLayout Orientation="Vertical" Spacing="0" Margin="10,10,10,10" HorizontalOptions="FillAndExpand">
-                                    <Label Text="Φ.Π.Α." HorizontalTextAlignment="End" VerticalTextAlignment="End" FontSize="Small"/>
-                                    <Switch x:Name="VatIncludedInPriceSwitch" IsToggled="{Binding Item.PriceEnteredWithTax}" HorizontalOptions="End" VerticalOptions="EndAndExpand" />
-                                </StackLayout>
-                            </StackLayout>
-                            <Label Text="{Binding PriceInfoText}" FontAttributes="Italic" VerticalTextAlignment="Start" HorizontalTextAlignment="End" />
-                        </StackLayout>
+                        <Label
+                            Text="DESCRIPTION"
+                            />
                     </ViewCell>
 
-                    <ViewCell >
-                        <StackLayout Orientation="Horizontal" Margin="15,20,10,20">
-                            <Label Text="ΚΑΤΗΓΟΡΙΑ Φ.Π.Α." FontSize="Small" />
-                            <Label Text="{Binding Item.VatPercentageString, StringFormat='{0}%'}" HorizontalOptions="EndAndExpand" FontAttributes="Bold" />
-                            <Label Text=">"  HorizontalOptions="End" VerticalOptions="Center"/>
-                        </StackLayout>
-                    </ViewCell>
-
-                    <ViewCell>
-                        <StackLayout Spacing="0" Margin="10,10,10,10">
-                            <Label Text="ΜΟΝΑΔΑ ΜΕΤΡΗΣΗΣ" VerticalTextAlignment="End" FontSize="Small" />
-                            <Picker ItemsSource="{Binding UnitsOfMeasureList}" SelectedItem="{Binding SelectedUnitOfMeasure}"   />
-                        </StackLayout>
-                    </ViewCell>
-
-                    <ViewCell >
-                        <StackLayout Orientation="Horizontal" Margin="15,13,10,13">
-                            <Label Text="ΚΑΤΑΣΤΑΣΗ" VerticalTextAlignment="Center" FontSize="Small" />
-                            <Frame CornerRadius="12" HorizontalOptions="EndAndExpand" Padding="8,5,8,5" BackgroundColor="{Binding Item.StatusColor}">
-                                <Label Text="{Binding Item.StatusString}" FontAttributes="None" VerticalTextAlignment="Center" TextColor="White" />
-                            </Frame>
-                            <Label Text=">"  HorizontalOptions="End" VerticalOptions="Center" VerticalTextAlignment="Center"/>
-                        </StackLayout>
-                    </ViewCell>
-
-                    <ViewCell>
-                        <StackLayout x:Name="SaveProductVewCell" Orientation="Vertical" Margin="10,40,10,10">
-                            <Button Text="Αποθήκευση"
-                                    x:Name="btnSaveItem"
-                                    BackgroundColor="Green" TextColor="White" HorizontalOptions="FillAndExpand"
-                                    />
-                        </StackLayout>
-                    </ViewCell>
                 </TableSection>
+
             </TableRoot>
+
         </TableView>
+
     </ContentPage.Content>
 
 </ContentPage>
