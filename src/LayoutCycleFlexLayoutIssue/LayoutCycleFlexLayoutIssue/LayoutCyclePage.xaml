@@ -3,11 +3,13 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="LayoutCycleFlexLayoutIssue.LayoutCyclePage"
              Title="LayoutCyclePage">
-
-    <StackLayout>
-        <FlexLayout>
-            <Label Text="ok" />
-        </FlexLayout>
-    </StackLayout>
     
+    <ContentPage.Content>
+        <StackLayout>
+            <FlexLayout>
+                <Label Text="ok" />
+            </FlexLayout>
+        </StackLayout>
+
+    </ContentPage.Content>
 </ContentPage>
