@@ -12,9 +12,7 @@
                 <TableSection>
 
                     <ViewCell>
-                        <Label
-                            Text="DESCRIPTION"
-                            />
+                        <Label Text="DESCRIPTION" />
                     </ViewCell>
 
                 </TableSection>
