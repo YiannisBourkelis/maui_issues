@@ -1,7 +1,7 @@
 ﻿using ObjCRuntime;
 using UIKit;
 
-namespace RadiogroupLayoutCycleIssue;
+namespace LayoutCycleFlexLayoutIssue;
 
 public class Program
 {

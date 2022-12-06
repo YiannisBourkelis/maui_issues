@@ -2,7 +2,7 @@ using System;
 using Microsoft.Maui;
 using Microsoft.Maui.Hosting;
 
-namespace RadiogroupLayoutCycleIssue;
+namespace LayoutCycleFlexLayoutIssue;
 
 class Program : MauiApplication
 {

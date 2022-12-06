@@ -1,4 +1,4 @@
-﻿namespace RadiogroupLayoutCycleIssue;
+﻿namespace LayoutCycleFlexLayoutIssue;
 
 public partial class AppShell : Shell
 {

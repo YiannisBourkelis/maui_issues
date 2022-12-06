@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.Logging;
 
-namespace RadiogroupLayoutCycleIssue;
+namespace LayoutCycleFlexLayoutIssue;
 
 public static class MauiProgram
 {

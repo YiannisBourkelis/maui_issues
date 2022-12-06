@@ -6,17 +6,17 @@
 		<!-- Uncomment to also build the tizen app. You will need to install tizen by following this: https://github.com/Samsung/Tizen.NET -->
 		<!-- <TargetFrameworks>$(TargetFrameworks);net7.0-tizen</TargetFrameworks> -->
 		<OutputType>Exe</OutputType>
-		<RootNamespace>RadiogroupLayoutCycleIssue</RootNamespace>
+		<RootNamespace>LayoutCycleFlexLayoutIssue</RootNamespace>
 		<UseMaui>true</UseMaui>
 		<SingleProject>true</SingleProject>
 		<ImplicitUsings>enable</ImplicitUsings>
 
 		<!-- Display name -->
-		<ApplicationTitle>RadiogroupLayoutCycleIssue</ApplicationTitle>
+		<ApplicationTitle>LayoutCycleFlexLayoutIssue</ApplicationTitle>
 
 		<!-- App Identifier -->
-		<ApplicationId>com.companyname.radiogrouplayoutcycleissue</ApplicationId>
-		<ApplicationIdGuid>d5d4b3b2-f987-4c24-a963-ac496696af9f</ApplicationIdGuid>
+		<ApplicationId>com.companyname.layoutcycleflexlayoutissue</ApplicationId>
+		<ApplicationIdGuid>09acef95-6de0-41e7-a4d1-6427706ee375</ApplicationIdGuid>
 
 		<!-- Versions -->
 		<ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
@@ -50,6 +50,12 @@
 
 	<ItemGroup>
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiXaml Update="LayoutCyclePage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	</ItemGroup>
 
 </Project>

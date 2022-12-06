@@ -1,6 +1,6 @@
 ﻿using Foundation;
 
-namespace RadiogroupLayoutCycleIssue;
+namespace LayoutCycleFlexLayoutIssue;
 
 [Register("AppDelegate")]
 public class AppDelegate : MauiUIApplicationDelegate
