@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="RadioGroupTouchIssue.StartupPage"
              Title="StartupPage">
-
-    <Button Text="Push page ok" Clicked="Button_Clicked_1" />
+<StackLayout>
+    <Button Text="Push a page" Clicked="Button_Clicked" VerticalOptions="Start" />
+    </StackLayout>
 </ContentPage>
