@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RadioGroupTouchIssue.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout>
+
+                <StackLayout
+                    x:Name="DailyPaymentsLayout"
+                    Spacing="0"
+                    Margin="10,0,0,0"
+                    RadioButtonGroup.GroupName="OrderColumnRadioGroup"      
+                    RadioButtonGroup.SelectedValue="{Binding RestService.ItemChild.OrderColumn}" >
+
+                    <StackLayout
+                        Orientation="Horizontal"
+                        Margin="0,3,0,0"
+                        Padding="0,0,0,0">                      
+                        <RadioButton x:Name="RadioGroupCharges" IsEnabled="{Binding PageEnabled}" FontSize="Micro" Content="ΧΡΕΩΣΕΙΣ" Value="invoices_gross_total_with_discount" />
+                        <RadioButton x:Name="RadioGroupPayments" IsEnabled="{Binding PageEnabled}" FontSize="Micro" Content="ΠΛΗΡΩΜΕΣ" Value="payments_total" />
+                        <RadioButton x:Name="RadioGroupBalance"  IsEnabled="{Binding PageEnabled}" FontSize="Micro" Content="ΥΠΟΛΟΙΠΟ" Value="account_balance" />           
+                    </StackLayout>
+
+                 </StackLayout>
+
+                <StackLayout
+                    Orientation="Horizontal"
+                    Margin="10,0,0,0"
+                    Spacing="10" VerticalOptions="Start"
+                    RadioButtonGroup.GroupName="OrderTypeRadioGroup"  
+                    RadioButtonGroup.SelectedValue="{Binding RestService.ItemChild.OrderType}">
+
+                        <RadioButton x:Name="RadioButtonAscOrder" IsEnabled="{Binding PageEnabled}" Value="asc"  ControlTemplate="{x:Static RadioButton.DefaultTemplate}" VerticalOptions="FillAndExpand" BackgroundColor="Transparent" >
+                            <RadioButton.Content>
+                                <Image HeightRequest="18">
+                                    <Image.Source>
+                                        <FontImageSource Size="18" FontFamily="OpenSansRegular" Color="Orange"  Glyph="+" />
+                                    </Image.Source>
+                                </Image>
+                            </RadioButton.Content>
+                        </RadioButton>
+
+                        <RadioButton x:Name="DescOrderRadioButton" IsEnabled="{Binding PageEnabled}" Value="desc"  ControlTemplate="{x:Static RadioButton.DefaultTemplate}" VerticalOptions="FillAndExpand" BackgroundColor="Transparent">
+                            <RadioButton.Content>
+                                <Image HeightRequest="18">
+                                    <Image.Source>
+                                        <FontImageSource Size="18" FontFamily="OpenSansRegular" Color="Orange"  Glyph="-" />
+                                    </Image.Source>
+                                </Image>
+                            </RadioButton.Content>
+                        </RadioButton>
+
+                </StackLayout>
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
+
